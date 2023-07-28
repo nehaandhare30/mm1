@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title> Motivational Msg V1 </title>
+	<style>
+		*{font-size:40px; }
+		body { background-color: lightblue; }
+	</style>
+	<script>
+		function show()
+		{
+		event.preventDefault();
+		let ans = document.getElementById("ans");
+		
+		//we created array of msgs
+		let mm = ["Life is about creating yourself" , "Stay focused" , "Be happy" , "All we have is now"];
+
+		//we are selecting any one random msg
+		let r = parseInt(Math.random() * mm.length);
+
+		//we are showing the msg
+		ans.innerHTML = mm[r];
+		}
+	</script>
+</head>
+
+<body>
+<center>
+	<h1> Motivational Msg V1 </h1>
+	<form onsubmit="show()">
+	<input type="submit" value="Get Msg"/>
+	</form>
+	<h1 id="ans" />
+</center>
+</body>
+</html>
